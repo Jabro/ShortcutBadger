@@ -8,7 +8,7 @@ import com.shortcutBadger.ShortcutBadger;
  * Created with IntelliJ IDEA.
  * User: leolin
  * Date: 2013/11/14
- * Time: 下午5:55
+ * Time: 5:55
  * To change this template use File | Settings | File Templates.
  */
 public class SonyHomeBadger extends ShortcutBadger {
@@ -31,6 +31,6 @@ public class SonyHomeBadger extends ShortcutBadger {
         intent.putExtra(INTENT_EXTRA_ACTIVITY_NAME, getEntryActivityName());
         intent.putExtra(INTENT_EXTRA_MESSAGE, String.valueOf(badgeCount));
         intent.putExtra(INTENT_EXTRA_SHOW_MESSAGE, badgeCount > 0);
-        mContext.sendBroadcast(intent);
+        context.sendBroadcast(intent);
     }
 }

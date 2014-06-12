@@ -12,7 +12,7 @@ import com.shortcutBadger.ShortcutBadger;
  * Created with IntelliJ IDEA.
  * User: leolin
  * Date: 2013/11/14
- * Time: 下午7:15
+ * Time: 7:15
  * To change this template use File | Settings | File Templates.
  */
 public class SamsungHomeBadger extends ShortcutBadger {
@@ -25,7 +25,7 @@ public class SamsungHomeBadger extends ShortcutBadger {
     @Override
     protected void executeBadge(int badgeCount) throws ShortcutBadgeException {
         Uri mUri = Uri.parse(CONTENT_URI);
-        ContentResolver contentResolver = mContext.getContentResolver();
+        ContentResolver contentResolver = context.getContentResolver();
         Cursor cursor = contentResolver.query(mUri, new String[]{"_id",}, "package=?", new String[]{getContextPackageName()}, null);
         if (cursor.moveToNext()) {
             int id = cursor.getInt(0);

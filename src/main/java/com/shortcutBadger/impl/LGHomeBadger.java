@@ -8,7 +8,7 @@ import com.shortcutBadger.ShortcutBadger;
  * Created with IntelliJ IDEA.
  * User: leolin
  * Date: 2013/11/14
- * Time: 下午5:55
+ * Time: 5:55
  * To change this template use File | Settings | File Templates.
  */
 public class LGHomeBadger extends ShortcutBadger {
@@ -28,6 +28,6 @@ public class LGHomeBadger extends ShortcutBadger {
         intent.putExtra(INTENT_EXTRA_BADGE_COUNT, badgeCount);
         intent.putExtra(INTENT_EXTRA_PACKAGENAME, getContextPackageName());
         intent.putExtra(INTENT_EXTRA_ACTIVITY_NAME, getEntryActivityName());
-        mContext.sendBroadcast(intent);
+        context.sendBroadcast(intent);
     }
 }
